@@ -1,0 +1,70 @@
+img{
+   border:solid;
+   border-radius: 5% !important;
+   display: inline
+}
+
+li{
+    text-decoration:underline;
+}
+
+.flag{
+    border:none;
+    height:250px;
+    width:400px;
+    border-radius: 0%;
+}
+
+.mex{
+    border:solid;
+    border-radius: 4px;
+}
+
+#playa{
+    border-color: blueviolet;
+}
+
+#top5 li{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+#top3 li{
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h2:hover{
+    color: cornflowerblue;
+    font-weight: bolder;
+}
+
+thead{
+    background-color: darkgrey;
+    color:white;
+}
+
+tr:nth-child(even){
+    background-color: goldenrod;
+}
+
+.image, .country{
+    display: inline;
+}
+
+.location{
+    display: inline-block;
+}
+
+.relative{
+    position:relative;
+    top: -150px;
+    left:550px;
+}
+
+/*
+!important = va a ser el primer estilo en ser aplicado
+# = id
+. = class
+: = se utilizan para actividades
+*/

@@ -1,3 +1,27 @@
 body {
     margin: 0;
 }
+
+.nom{
+    height: 200px;
+    width: 200px;
+}
+
+.top{
+    background-color: red;
+    border: 10px solid #000;
+    padding: 20px #000;
+}
+
+.mid{
+    background-color: darkblue;
+    border: 20px solid #000;
+    margin-left: 220px;
+    
+}
+
+.bot{
+    background-color: green;
+    border: 10px solid #000;
+    margin-left: 460px;
+}
