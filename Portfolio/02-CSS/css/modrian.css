@@ -38,7 +38,7 @@ body{
 
 .c4{
     height: 170px;
-    width: 400px;
+    width: 300px;
     border: 5px solid #000;
     position: absolute;
     background-color: rgb(196, 187, 187);
@@ -52,15 +52,35 @@ body{
     position: absolute;
     background-color: #000;
     margin-top: 200px;
-    margin-left: 560px;
+    margin-left: 460px;
 }
 
 .c6{
     height: 80px;
     width: 100px;
     border: 10px solid #000;
+    margin-top: 280px;
+    margin-left: 480px;
+    position: absolute;
+    background-color: rgb(216, 216, 137);
+}
+
+.c7{
+    height: 80px;
+    width: 100px;
+    border: 10px solid #000;
     margin-top: 200px;
-    margin-left: 580px;
+    margin-left: 480px;
     position: absolute;
     background-color: rgb(196, 187, 187);
+}
+
+.c8{
+    height: 415px;
+    width: 435px;
+    border: 5px solid #000;
+    margin-left: 155px;
+    margin-top: -218px;
+    position: absolute;
+    background-color: red;
 }
