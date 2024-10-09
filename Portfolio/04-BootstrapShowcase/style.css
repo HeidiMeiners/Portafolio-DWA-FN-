@@ -1,0 +1,74 @@
+.body{
+    margin: 0px;
+    background-color: rgb(243, 243, 243);
+}
+
+.navbar{
+    background-color: #ffc107;
+}
+
+.margen{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.margentop{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boton:hover{
+    background-color: #ffc107;
+    color: white;
+    border-color: #ffca2c;
+    border-radius: 10px;
+}
+
+.bnorm{
+    border-radius: 10px;
+    background-color: #f8c93a;
+    border-color: #ffca2c;
+}
+
+.dark-mode .navbar,.dark-mode .accordion-button {
+    background-color: #343a40;
+    color: white;
+}
+
+.light-mode .navbar, .light-mode .accordion-button {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.dark-mode .btn-toggle {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .btn-toggle {
+    background-color: black;
+    color: white;
+}
+
+.carousel-caption h5, 
+.carousel-caption p {
+  color: black;
+}
+
+#carouselExampleCaptions {
+    max-width: 800px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+#carouselExampleCaptions img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.centrar{
+    margin-left: 50%;
+    margin-bottom: 20px;
+}
+
