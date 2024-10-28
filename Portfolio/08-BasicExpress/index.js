@@ -1,0 +1,18 @@
+const express = require("express");
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
+app.get("/", (req, res) => { 
+    res.sendFile(__dirname + "/index.html");
+});
+
+app.post("/", (req, res) => {
+    var weight = req.body.weight;
+    var height = req.body.height;
+    res.send("Your BMI is " + ((weight / (height * height))*10000));
+});
+
+app.listen(3000, ()=>{ 
+    console.log("Example app listening on port 3000"); 
+});
