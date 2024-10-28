@@ -1,12 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Web site</title>
+    <link href="css/stylesbien.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
-<body>
-  
+<body class="back">
+    <div class="anchor">
+    <h1>Heidi Meiners Muñoz</h1>
+    </div>
+    <hr>
+    <div>
+    <p><strong>Full time student</strong><br>Circunvalacion poniente, ext.1399, ciudad granja, zapopan.</p>
+    <blockquote>"I'm just a mess, you don't want to fix"<br>-Shawm Mendes</blockquote>
+    <p>I want to be remeber as a funny person, who enjoyed life and also someone who make big things out of small ones.</p>
+    <p>My family birthdays <a href="#bdays">here</a></p>
+    <p>This are my favorite <a href="destinations.html">destinations</a></p>
+    </div>
+    <hr>
+    <div>
+    <h2>Background</h2>
+    <p>I'm from Leon, gto., Mexico, and since i dont't live there anymore that's my hole personality</p>
+    </div>
+    <div>
+    <hr>
+    <h2>Education</h2>
+    <ul>
+        <li><b><a href="https://www.institutolux.edu.mx/lux/">Instituto Lux </b><em>(2011-2023)</em></strong>
+        <img src="img/Logo lux.png" alt="Logo of Instituto Lux" width="70px" height="70px"/></a></li>
+        <li><b><a href="https://www.up.edu.mx/campus-guadalajara/">Universidad Panamericana</b> <em>(2023 - )</em>
+        <img src="img/Universidad_Panamericana_Logo_.jpg" alt="Logo of Universidad Pnamericana" width="120px" height="70px"/></a></li>
+    </ul>
+    </div>
+    <hr>
+    <div>
+    <h2>Skills</h2>
+    <ol start="1">
+        <li>Math(sometimes) <em>80%</em></li>
+        <li>Team work <em>60%</em></li>
+        <li>Cooking <em>70%</em></li>
+        <li>Ping pong <em>30%</em></li>
+        <li>Problem solving <em>80%</em></li>
+    </ol>
+    </div>
+    <hr>
+    <div>
+    <h2>Hobbies</h2>
+    <h3>Favorite food</h3>
+    <ol id="top5">
+        <li>Italian</li>
+        <li>Mexican</li>
+        <li>Belgian</li>
+        <li>German</li>
+        <li>Japanese</li>
+    </ol>
+    <ol start="19" id="top3">
+        <li>Indian</li>
+        <li>Arab</li>
+        <li>Leganses</li>
+    </ol>
+    <h3>Books, Movies & TV shows</h3>
+    <ul>
+        <li><span>Books</span>
+            <ol>
+                <li>"The seven husbands of Evelyn Hugo"<img src="img/7maridos.jpg" alt="Portada de los 7 maridos de Evelyn Hugo" class="imagenes3"/></li>
+                <li>"The Cousins"<img src="img/cousins.jpg" alt="Portada de The cousins" class="imagenes3"/></li>
+                <li>"The cruel prince"<img src="img/cruelprince.jpg" alt="Portada de The Cruel Prince" class="imagenes3"/></li>
+            </ol>
+        </li>
+        <li><span>Movies</span>
+            <ol>
+                <li>"1917"<img src="img/1917.jpg" alt="Portada de The Cruel Prince" class="imagenes3"/></li>
+                <li>"Jumanji: Welcome to the jungle"<img src="img/jumanji.jpg" alt="Portada de The Cruel Prince" class="imagenes3"/></li>
+                <li>"Charly and the chocolate factory"<img src="img/charlieYlafabricadechocolates.jpg" alt="Portada de The Cruel Prince" class="imagenes3"/></li>
+            </ol>
+        </li>
+        <li><span>TV shows</span>
+            <ol>
+                <li>"Las chicas del cable"<img src="img/Chicasdelcable.jpg" alt="Portada de The Cruel Prince" class="imagenes3"/></li>
+                <li>"Young sheldon"<img src="img/Youngsheldon.jpg" alt="Portada de The Cruel Prince" class="imagenes3"/></li>
+                <li>"How i met your mother"<img src="img/howimetyourmother.jpg" alt="Portada de The Cruel Prince" class="imagenes3"/></li>
+            </ol>
+        </li>
+    </ul>
+    </div>
+    <hr>
+    <div class="center">
+    <h2>Family birthdays</h2>
+    <table id="bdays" border="1" class="center">
+        <thead>
+            <tr>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Birthday</th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Lastname</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Erich</td>
+                <td>Meiners Tovar</td>
+                <td>August 25th 1963</td>
+            </tr>
+            <tr>
+                <td>Ana Ivette</td>
+                <td>Muñoz Gutierrez</td>
+                <td>June 14th 1966</td>
+            </tr>
+            <tr>
+                <td>Erich</td>
+                <td>Meienrs Muñoz</td>
+                <td>May 9th 1991</td>
+            </tr>
+            <tr>
+                <td>Stefan</td>
+                <td>Meiners Muñoz</td>
+                <td>October 10th 1993</td>
+            </tr>
+            <tr>
+                <td>Paul</td>
+                <td>Meiners Muñoz</td>
+                <td>January 23th 1995</td>
+            </tr>
+        </tbody>
+        <caption>Table of birthdays</caption>
+    </table>
+    </div>
+    <hr>
+    <div class="center">
+        <h2>Favorites artists</h2>
+        <table border="1" class="center">
+            <thead>
+                <tr>
+                    <td>Picture</td>
+                    <td>Name</td>
+                    <td>Date of Birth</td>
+                    <td>Profession</td>
+                    <td>Most famous work</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="img/Taylor.jpg" class="famous"></td>
+                    <td>Taylor Swift</td>
+                    <td>December 13th 1989</td>
+                    <td>Singer</td>
+                    <td>
+                        <ul>
+                            <li>Reputaion</li>
+                            <li>Lover</li>
+                            <li>1989</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="img/Shawn-Mendes.jpg" class="famous"></td>
+                    <td>Shawn Mendes</td>
+                    <td>August 8th 1998</td>
+                    <td>Singer</td>
+                    <td>
+                        <ul>
+                            <li>Ilumination</li>
+                            <li>Shamwn Mendes</li>
+                            <li>Wonder</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="img/Olivia-Rodrigo.jpg" class="famous"></td>
+                    <td>Olivia Rodrigo</td>
+                    <td>February 20th 2003</td>
+                    <td>Singer</td>
+                    <td>
+                        <ul>
+                            <li>Sour</li>
+                            <li>Guts</li>
+                            <li>High School Musical: The Musical, the series</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <h2>Form</h2>
+    <div class="center">
+        <h2>Form</h2>
+    <h3>Date</h3>
+    <input type="date" id="date"/>
+
+    <h3>Time Start</h3>
+    <input type="time" id="timeStart"/>
+
+    <h3>Time End</h3>
+    <input type="time" id="timeEnd"/>
+
+    <h3>Activity</h3>
+    <input type="text" id="activity"/>
+
+    <h3>Place</h3>
+    <input type="text" id="place"/>
+
+    <h3>Type</h3>
+    <select id="type">
+        <option value="School">School</option>
+        <option value="Personal">Personal</option>
+        <option value="Professional">Professional</option>
+        <option value="Family">Family</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <h3>Notes</h3>
+    <textarea id="notes" rows="5" cols="33">Notes</textarea>
+
+    <br><br>
+    <button onclick="addToSchedule()">Add to Schedule</button>
+    <br><br>
+        <!--</form>
+        <h3>Flag</h3>
+        <form>
+            <input type="color"/>
+        </form>
+        <h3>Free/busy</h3>
+        <form>
+            <input type="checkbox"/> Free
+            <input type="checkbox"/> Busy
+        </form>
+    -->
+    </div>
+    <div>
+        <table border="1" id="scheduleTable">
+            <tr>
+                <th>Date</th>
+                <th>Time Start</th>
+                <th>Time End</th>
+                <th>Place</th>
+                <th>Activity</th>
+                <th>Notes</th>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
+
+<!--
+h1 = titulo
+h2 = subtiutlo
+em = cursiva enfasis
+i = cursiva
+strong = negritas enfasis
+b = negritas
+br = saltos de linea
+hr = linea separadora
+< = &lt (en el texto)
+> = &gt (en el texto)
+blockquote = sangria
+ul = iniciar lista
+li = punto en la lista
+ol = iniciar lista numerada
+span = lo que esta dentro se comporta como nostros le dijamos
+table = tabla
+tr = una fila en la tabla
+td = columna en la tabla
+tfoot = el pie de la tabla
+caption = titulo de la tabla
+colspan = une dos columnas para hacer solo un recuadro
+rowspan = une dos filas para hacerun solo recuadro
+a= hipervinculos
+div = dividir
+form = es para interactuar con el usuario
+input = introducir cosas
+img src = imagenes (border = borde)
+style = estilos de las cosas
+img{} = todas las imagenes se van a poner igual
+li{} = todo las lineas de puentos se van a ver iguales
+-->
