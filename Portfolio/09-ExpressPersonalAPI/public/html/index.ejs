@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Test</title>
+</head>
+
+<body>
+    <% if (locals.error) { %>
+        <h3>
+            <%= error %>
+        </h3>
+    <% } %>
+    
+    <form id="registrationForm" action="/greet" method="get">
+        Register:
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="submit" value="Go Next">
+    </form>
+
+    <div id="greetingMessage">
+        <% if (typeof names !== 'undefined' && names.length > 0) { %>
+            <ul>
+                <% names.forEach(function(name) { %>
+                    <li>
+                        <a href="/wazzup?name=<%= encodeURIComponent(name) %>">Hello, <%= name %>!</a>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+    </div>
+
+    <h3>TODO List</h3>
+    <form action="/task" method="post">
+        <input type="text" name="task" placeholder="New Task" required>
+        <button type="submit" value="Add Task"></button>
+    </form>
+    <ul>
+        <% if (typeof tasks !== 'undefined' && tasks.length > 0) { %>
+            <% tasks.forEach(function(task, index) { %>
+                <li>
+                    <%= task %>
+                    <form action="/task/delete" method="post" style="display:inline;">
+                        <input type="hidden" name="index" value="<%= index %>">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <button onclick="moveUp(<%= index %>,-1)">↑</button>
+                    <button onclick="moveDown(<%= index %>,1)">↓</button>
+                </li>
+            <% }); %>
+        <% } %>
+    </ul>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            console.log(name);
+
+            const greetingMessage = document.getElementById('greetingMessage');
+            this.submit();
+        });
+
+        function moveUp(index) {
+            if (index > 0) {
+                const task = document.querySelectorAll('li')[index];
+                const previousTask = document.querySelectorAll('li')[index - 1];
+                previousTask.insertAdjacentElement('afterend', task); // Move the current task up
+            }
+        }
+
+        function moveDown(index) {
+            const tasks = document.querySelectorAll('li');
+            if (index < tasks.length - 1) {
+                const task = tasks[index];
+                const nextTask = tasks[index + 1];
+                nextTask.insertAdjacentElement('afterend', task); // Move the current task down
+            }
+        }
+    </script>
+</body>
+
+</html>

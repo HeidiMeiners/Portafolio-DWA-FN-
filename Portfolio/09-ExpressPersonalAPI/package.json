@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "body-parser": "^1.20.3",
     "ejs": "^3.1.10",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "http": "^0.0.1-security",
+    "postman": "^0.2.0"
   }
 }
