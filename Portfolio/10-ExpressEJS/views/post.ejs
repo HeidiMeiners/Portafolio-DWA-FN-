@@ -1,0 +1,23 @@
+<%- include('partials/header', { userName: userName }); %>
+
+<main>
+    <h2><%= post.id ? "Edit Post" : "Create New Post" %></h2>
+    <h3><%= post.title %></h3>
+    <p><%= post.content %></p>
+
+    <form action="/post/<%= post.id %>?_method=<%= post.id ? "PUT" : "POST" %>" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="<%= post.title %>" required>
+        <label for="content">Content:</label>
+        <textarea name="content" id="content" required><%= post.content %></textarea>
+        <input type="submit" value="<%= post.id ? 'Update Post' : 'Create Post' %>">
+    </form>
+    
+    <% if (post.id) { %>
+        <form action="/post/<%= post.id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Post">
+        </form>
+    <% } %>
+</main>
+
+<%- include('partials/footer'); %>

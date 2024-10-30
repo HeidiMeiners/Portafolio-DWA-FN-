@@ -1,0 +1,15 @@
+<%- include('partials/header', { userName: userName }); %>
+<img src="../images/StarLion.png" alt="lion brewery" />
+    <h1>Welcome to my landing page</h1>
+    <form action="/login" method="GET">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" />
+    </form>
+    
+    <form action="/login" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required /> <!-- Cambiado a username -->
+        <input type="submit" />
+    </form>
+<%- include('partials/footer'); %>
