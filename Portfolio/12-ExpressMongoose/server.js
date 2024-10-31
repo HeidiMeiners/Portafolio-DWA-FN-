@@ -8,18 +8,19 @@ app.use(express.static("public"));
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 
-const mongoUrl = "mongodb://127.0.0.1:27017/f1";
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+var user=process.env.USER;
+var password=process.env.PASSWORD;
+var db=process.env.DB;
 
-// Definition of a schema
+const mongoUrl=`mongodb+srv://${user}:${password}@heidi.l9bad.mongodb.net/${db}`;
+mongoose.connect(mongoUrl);
+
 const teamSchema = new mongoose.Schema({
   id: Number,
   name: String,
   nationality: String,
   url: String,
 });
-teamSchema.set("strictQuery", true);
-
 const driverSchema = new mongoose.Schema({
   num: Number,
   code: String,
@@ -30,7 +31,6 @@ const driverSchema = new mongoose.Schema({
   url: String,
   team: teamSchema,
 });
-driverSchema.set("strictQuery", true);
 
 const Team = mongoose.model("Team", teamSchema);
 const Driver = mongoose.model("Driver", driverSchema);
@@ -53,10 +53,43 @@ let countries = [
   { code: "DEN", label: "Denmark" },
 ];
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/html/index.html");
+app.get("/", async (req, res) => {
+  try {
+    const teams = await Team.find();
+    const drivers = await Driver.find();
+    res.render("index", { teams, drivers, countries });
+  } catch (error) {
+    console.error("Error loading data:", error);
+    res.status(500).send("Error loading data.");
+  }
+});
+
+app.post("/driver", async (req, res) => {
+  try {
+    const { num, code, forename, surname, dob, nationality, url, team } = req.body;
+    const driverTeam = await Team.findOne({ name: team });
+    const newDriver = new Driver({ num, code, forename, surname, dob, nationality, url, team: driverTeam });
+    await newDriver.save();
+    res.redirect("/");
+  } catch (error) {
+    console.error("Error adding driver:", error);
+    res.status(500).send("Error adding driver.");
+  }
+});
+
+app.post("/driver/edit/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedData = req.body;
+    await Driver.findByIdAndUpdate(id, updatedData);
+    res.redirect("/");
+  } catch (error) {
+    console.error("Error editing driver:", error);
+    res.status(500).send("Error editing driver.");
+  }
 });
 
 app.listen(3000, (err) => {
+  if (err) console.error("Error starting server:", err);
   console.log("Listening on port 3000");
 });
